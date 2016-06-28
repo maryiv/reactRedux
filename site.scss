@@ -1,0 +1,188 @@
+$header-background: #f69e33;
+$button-face: #f27630;
+$sort-arrow: #f27630;
+$nav-button: #ec452e;
+$table-heading-background: #9d9fa2;
+$table-heading-foreground: #f4e3cb;
+$page-heading: #111211;
+$chart-background: #dcddde;
+$chart-instruction: #838487;
+$legend-border: #c7c8ca;
+
+body {
+    font-size: 12px;
+    font-family: Trebuchet MS, "Helvetica Neue", "Arial", "sans-serif";
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+button {
+    width: 100px;
+    border: none;
+    background: $button-face;
+    color: white;
+    margin-left: 10px;
+    font-size: 12px
+}
+
+/* Header */
+header {
+    display: flex;
+    background: $header-background;
+    padding: 30px 20px;
+
+    .logo h1 {
+        margin: 3px 0;
+
+        .subtitle {
+            font-size: 0.8rem;
+        }
+    }
+
+    nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            background: $nav-button;
+            font-size: 13px;
+
+            i.glyphicon {
+                display: block;
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: $page-heading;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: $page-heading;
+}
+
+section.accounts {
+
+    flex: 1;
+    margin-right: 20px;
+
+    .header {
+        display: flex;
+        height: 30px;
+
+        button {
+            height: 25px;
+        }
+    }
+
+    .header > .actions {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    table {
+
+        width: 100%;
+
+        .marketValue, .cash {
+            text-align: right;
+        }
+
+        .legend {
+            display: table-cell;
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        th {
+            background: $table-heading-background;
+            padding: 5px;
+            color: $table-heading-foreground;
+            text-transform: uppercase;
+            font-family: Trebuchet MS;
+            font-size: 12px;
+
+            a {
+                color: $table-heading-foreground;
+                font-weight: normal;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            .arrow-up {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid $sort-arrow;
+                margin: 0;
+            }
+
+            .arrow-down {
+                display: inline-block;
+                width: 0; 
+                height: 0; 
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid $sort-arrow;
+                margin: 0;
+            }
+        }
+    }
+
+    .totals td {
+        font-weight: bold;
+        border-top: 3px solid $table-heading-background;
+    }
+
+    td.legend {
+        width: 100px;
+     
+    }
+
+    div.legend {
+        width: 30px;
+        height: 16px;
+        border: 1px solid $legend-border;
+    }
+}
+
+section.chart {
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    background: $chart-background;
+
+    .chart {
+        height: 300px;
+    }
+
+    .help-label {
+        padding: 10px;
+        font-style: italic;
+        font-size: 11px;
+        color: $chart-instruction;
+    }
+}
