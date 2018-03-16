@@ -1,8 +1,5 @@
 ### Test Task
 
-#### Source
-[The short test for complete](https://github.com/garethdown44/react-redux-test)
-
 #### To run the app/tests
 
 1. npm install

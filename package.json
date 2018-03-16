@@ -1,6 +1,6 @@
 {
-  "name": "Bullsfirst",
-  "version": "0.0.0",
+  "name": "react-test-task",
+  "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
     "debug": "^2.2.0",
